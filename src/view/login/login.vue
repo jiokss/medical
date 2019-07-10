@@ -57,13 +57,8 @@ export default {
     },
     methods:{
       submitLogin(){
-        this.$axios.get('http://www.wuts66.com')
-        .then((res)=>{
-          console.log(res)
-        })
-        .catch((err)=>{
-          console.log(err)
-        })
+          //登录跳转
+          this.$router.replace({ path: "/content" })
       }
     },
     components:{
