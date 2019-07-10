@@ -2,7 +2,7 @@
     <div class="m-content">
       <router-view></router-view>
       <mt-tabbar v-model="selected" fixed>
-        <mt-tab-item v-for="(itetm,index) in btmList" :id="itetm.value" :key="index">
+        <mt-tab-item v-for="(itetm,index) in btmList" :id="itetm.value" :key="index" >
           <span>3</span>
           {{itetm.title}}
         </mt-tab-item>
@@ -37,7 +37,7 @@ export default {
    },
    watch:{
      selected:function(newValue,oldValue){
-       if(newValue=='tab3'){
+       if(newValue=='0'){
         this.$router.replace({ path: "/content/test" })
        }
        console.log(oldValue)

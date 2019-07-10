@@ -18,6 +18,7 @@ export default new Router({
       path: '/content',
       name: 'Content',
       component: Content,
+      redirect: '/content/test',
       children:[
         {
           path: 'test',
