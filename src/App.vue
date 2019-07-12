@@ -1,12 +1,24 @@
 <template>
   <div id="app">
+    <mt-header fixed :title="headerTitle">
+      <router-link to="/" slot="left">
+        <mt-button icon="back"></mt-button>
+      </router-link>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+      headerTitle:'加减医学'
+    }
+  }
 }
 </script>
 

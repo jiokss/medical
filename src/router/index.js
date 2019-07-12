@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '@/view/login/login'
+import Login from '@/view/login/login'
+import Content from '@/view/content'
+import Test from '@/view/test'
+
 
 Vue.use(Router)
 
@@ -8,8 +11,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: login
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/content',
+      name: 'Content',
+      component: Content,
+      redirect: '/content/test',
+      children:[
+        {
+          path: 'test',
+          name: 'test',
+          component: Test,
+        }
+      ]
     }
   ]
 })
