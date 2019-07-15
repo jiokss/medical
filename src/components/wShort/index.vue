@@ -22,7 +22,6 @@ export default {
        this.canCheck = true;
        let setInter = setInterval(()=>{
          this.title = this.time + 's后重新发送'
-         console.log(this.time)
          if(this.time == 0){
             clearInterval(setInter);
             this.title = '获取验证码'

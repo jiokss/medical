@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Login from '@/view/login/login'
 import Content from '@/view/content'
 import Test from '@/view/test'
-
+import Service from '@/view/service'
 
 Vue.use(Router)
 
@@ -24,6 +24,11 @@ export default new Router({
           path: 'test',
           name: 'test',
           component: Test,
+        },
+        {
+          path: 'service',
+          name: 'service',
+          component: Service,
         }
       ]
     }

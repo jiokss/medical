@@ -39,6 +39,8 @@ export default {
      selected:function(newValue,oldValue){
        if(newValue=='0'){
         this.$router.replace({ path: "/content/test" })
+       }else if(newValue=='1'){
+         this.$router.replace({ path: "/content/service" })
        }
        console.log(oldValue)
        console.log(newValue)
@@ -50,5 +52,11 @@ export default {
   .m-content{
     padding:40px 0;
 
+  }
+  .mint-tabbar{
+  	border-top:1px solid #f5f5f5;
+  	background-color:#fff ;
+  	min-height: 40px;
+  	line-height: 40px;
   }
 </style>
