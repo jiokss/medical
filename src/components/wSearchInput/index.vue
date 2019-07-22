@@ -30,12 +30,12 @@ export default {
     float: left;
     width: 80%;
     border-radius: 3px;
-    background-color:#f9f9f9;
+    background-color:rgb(241,243,244);
     input{
       float:right;
       width: 90%;
-      height:20px;
-      line-height:20px;
+      height:26px;
+      line-height:26px;
       border:none;
       background-color:transparent;
       outline: none;
@@ -45,6 +45,8 @@ export default {
     float: left;
     display: block;
     width: 20%;
+    height:26px;
+    line-height:26px;
     text-align: center;
     color: #777;
     font-size: 0.9rem;

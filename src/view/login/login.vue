@@ -14,7 +14,7 @@
 
           <mt-field label="手机号码" type="text" v-model="phoneNum" v-if="value==1" :attr="{ maxlength: 18}"></mt-field>
           <mt-field label="账号" type="text" v-model="user" v-if="value==0" :attr="{ maxlength: 18}"></mt-field>
-          <mt-field label="验证码" v-model="verCode" :attr="{ maxlength: 6 }">
+          <mt-field label="验证码" v-model="verCode" :attr="{ maxlength: 6 }" v-lfcous>
             <img :src="verImg" height="45px" width="100px" @click="changeVer">
           </mt-field>
           <mt-field label="密码" type="text" v-model="password" v-if="value==1" :attr="{ maxlength: 18 }"></mt-field>
@@ -65,7 +65,11 @@ export default {
     activated() {
     },
     mounted(){
-      this.verImg = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_09b6296.png'
+      console.log(this)
+      this.verImg = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_09b6296.png';
+      //document.getElementsByTagName("input").addListen("onfocus",function(){
+      //  alert(1)
+      //})
     },
     watch:{
       value(){
@@ -156,6 +160,11 @@ export default {
 }
 </script>
 <style lang="scss" rel="stylesheet/scss">
+  .mint-cell-wrapper{
+    background-image:none;
+  }
+  .mint-radiolist .mint-cell{
+  }
   .mint-radiolist{
     clear: both;
     overflow: hidden;
@@ -166,15 +175,25 @@ export default {
       background-color: transparent;
     }
   }
+  .mint-cell:last-child{
+    background-image:none;
+  }
   .login-concent{
     height: 100%;
     display: flex;
     align-items: center;
+    position:relative;
 
   }
-  .wLogin .mint-cell{
+  .loginFrom .mint-cell{
     border-bottom: 1px solid #eee;
     color: #888;
+  }
+  .wLogin .mint-cell:first-child{
+    border-top: 1px solid #eee;
+  }
+  .wLogin .mint-cell:last-child{
+    border-bottom: none;
   }
   .login-concent-from{
     width: 100%;

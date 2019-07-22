@@ -4,6 +4,9 @@ import Login from '@/view/login/login'
 import Content from '@/view/content'
 import Test from '@/view/test'
 import Service from '@/view/service'
+import Mine from '@/view/mine'
+import ChangePhone from '@/view/changePhone'
+import Consultation from '@/view/consultation'
 
 Vue.use(Router)
 
@@ -29,8 +32,24 @@ export default new Router({
           path: 'service',
           name: 'service',
           component: Service,
+        },
+        {
+          path: 'mine',
+          name: 'mine',
+          component: Mine,
         }
+
       ]
+    },
+    {
+      path: '/changePhone',
+      name: 'changePhone',
+      component: ChangePhone,
+    },
+    {
+      path: '/consultation',
+      name: 'consultation',
+      component: Consultation,
     }
   ]
 })

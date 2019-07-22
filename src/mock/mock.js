@@ -5,3 +5,11 @@ Mock.mock(RegExp('/login' + ".*"), (req, res) => {
 
   }
 })
+
+
+Mock.mock(RegExp('/dataList' + ".*"), (req, res) => {
+  return {
+    data:"2,4,5"
+
+  }
+})

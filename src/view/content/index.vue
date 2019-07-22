@@ -3,7 +3,6 @@
       <router-view></router-view>
       <mt-tabbar v-model="selected" fixed>
         <mt-tab-item v-for="(itetm,index) in btmList" :id="itetm.value" :key="index" >
-          <span>3</span>
           {{itetm.title}}
         </mt-tab-item>
       </mt-tabbar>
@@ -41,6 +40,8 @@ export default {
         this.$router.replace({ path: "/content/test" })
        }else if(newValue=='1'){
          this.$router.replace({ path: "/content/service" })
+       }else if(newValue=='2'){
+         this.$router.replace({ path: "/content/mine" })
        }
        console.log(oldValue)
        console.log(newValue)

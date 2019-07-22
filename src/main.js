@@ -12,6 +12,20 @@ import Mockjs from '../src/mock/mock'
 Vue.config.productionTip = false
 Vue.use(MintUI)
 Vue.use(Vuex)
+//自定义指令
+Vue.directive('lfcous', function(el, pra, a) {
+
+  let oInput = el.querySelector('input');
+  oInput.onfocus = function() {
+         //创建focus的事件
+         console.log(document.body.clientHeight)
+
+  };
+
+  oInput.onblur = function() {
+        //同时创建blur事件
+  };
+})
 
 //全局挂载axios
 Vue.prototype.$axios = axios
