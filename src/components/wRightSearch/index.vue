@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="right-search-box">
-        <mt-popup v-model="popupVisible" popup-transition="popup-fade" closeOnClickModal="true" position="right">
+        <mt-popup v-model="popupVisible" @chaneType="propClone" popup-transition="popup-fade" closeOnClickModal="true" position="right">
             <div class="search-box">
               <p>送检时间：</p>
               <div>
@@ -104,6 +104,10 @@ export default {
    watch:{
      showprop(n,o){
        this.popupVisible = this.showprop
+     },
+     popupVisible(newVle,oldVle){
+       console.log(newVle)
+       console.log(oldVle)
      }
    },
   props:['showprop']

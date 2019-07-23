@@ -4,7 +4,7 @@
        <ul class="list" >
 		        <li class="list-li" v-for="(item,index) in pageList" :key="index">
 		          <div class="examine-box">
-		          	<div class="examine-box-top">
+		          	<div class="examine-box-top" @click="showRepData">
 		          		<p><span>雪无语</span><span>检测编码<i>12878</i></span></p>
 		          		<p><span>核基因定点项目(sanger测序)</span><span>></span></p>
 		          	</div>
@@ -26,9 +26,9 @@
 		          			</ul>
 		          		</div>
 		          		<div class="exam-btm-btn">
-		          			<mt-button type="default">遗传咨询</mt-button>
-			             	<mt-button type="default">电子发票</mt-button>
-			             	<mt-button type="default">申请单</mt-button>
+		          			<mt-button type="default" @click="order">遗传咨询</mt-button>
+			             	<mt-button type="default" @click="showPic">电子发票</mt-button>
+			             	<mt-button type="default" @click="showPic">申请单</mt-button>
 			             	<mt-button type="default">待发布</mt-button>
 		          		</div>
 		          	</div>
@@ -88,6 +88,15 @@ export default {
         if(HaveMore){
             this.allLoaded = false;
         }
+      },
+      showPic(){
+          this.$router.replace({ path: "/showImages" })
+      },
+      showRepData(){
+          this.$router.replace({ path: "/testSheet" })
+      },
+      order(){
+          this.$router.replace({ path: "/order" })
       }
    }
 }

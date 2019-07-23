@@ -8,9 +8,14 @@ import 'mint-ui/lib/style.css'
 import axios from 'axios'
 import Vuex from 'vuex'
 import Mockjs from '../src/mock/mock'
+import Preview from 'vue-photo-preview'
+import 'vue-photo-preview/dist/skin.css'
+import Calendar from 'vue-mobile-calendar'
 
 Vue.config.productionTip = false
 Vue.use(MintUI)
+Vue.use(Preview)
+Vue.use(Calendar)
 Vue.use(Vuex)
 //自定义指令
 Vue.directive('lfcous', function(el, pra, a) {

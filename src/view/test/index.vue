@@ -78,6 +78,7 @@ export default {
 
       childByValue(childValue){
         this.showprop = childValue
+        console.log(this.showprop)
       }
   },
   components:{
@@ -107,7 +108,7 @@ export default {
 		top: 150px;
 		left: 0;
 		right: 0;
-		bottom: 60px;
+		bottom: 40px;
 		overflow-y: auto;
 	}
   .screen-box{
@@ -117,7 +118,7 @@ export default {
   	background-color:#fff ;
   	padding: 5px;
     position:relative;
-    z-index:999;
+    // z-index:999;
   	.rep-box{
   		margin-bottom: 5px;
   	}

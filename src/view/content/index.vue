@@ -19,6 +19,10 @@ export default {
             value:'0'
           },
           {
+            title:'项目册',
+            value:'3'
+          },
+          {
             title:'服务',
             value:'1'
           },
@@ -42,6 +46,8 @@ export default {
          this.$router.replace({ path: "/content/service" })
        }else if(newValue=='2'){
          this.$router.replace({ path: "/content/mine" })
+       }else if(newValue=='3'){
+         this.$router.replace({ path: "/content/itemBook" })
        }
        console.log(oldValue)
        console.log(newValue)

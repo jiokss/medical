@@ -7,6 +7,11 @@ import Service from '@/view/service'
 import Mine from '@/view/mine'
 import ChangePhone from '@/view/changePhone'
 import Consultation from '@/view/consultation'
+import ItemBook from '@/view/itemBook'
+import ShowImages from '@/view/ShowImages'
+import TestSheet from '@/view/testSheet'
+import Order from '@/view/order'
+import OrderConsultation from '@/view/OrderConsultation'
 
 Vue.use(Router)
 
@@ -37,6 +42,31 @@ export default new Router({
           path: 'mine',
           name: 'mine',
           component: Mine,
+        },
+        {
+          path: 'itemBook',
+          name: 'itemBook',
+          component: ItemBook,
+        },
+        {
+          path: '/showImages',
+          name: 'showImages',
+          component: ShowImages,
+        },
+        {
+          path: '/testSheet',
+          name: 'testSheet',
+          component: TestSheet,
+        },
+        {
+          path: '/order',
+          name: 'order',
+          component: Order,
+        },
+        {
+          path: '/orderConsultation',
+          name: 'orderConsultation',
+          component: OrderConsultation,
         }
 
       ]
